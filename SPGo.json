@@ -1,0 +1,20 @@
+{
+    "sourceDirectory": "src",
+    "sharePointSiteUrl": "https://academiashareptavanade.sharepoint.com/sites/Poc",
+    "workspaceRoot": "c:\\Users\\bruna.santos.fortes\\Documents\\Projetos\\Poc",
+    "publishWorkspaceOptions": {
+        "destinationFolder": "/",
+        "globPattern": "c:\\Users\\bruna.santos.fortes\\Documents\\Projetos\\Poc\\src\\**\\*.*",
+        "localRoot": "c:\\Users\\bruna.santos.fortes\\Documents\\Projetos\\Poc\\src"
+    },
+    "publishingScope": "Minor",
+    "authenticationType": "Digest",
+    "remoteFolders": [
+        "/SiteAssets/**/*",
+        "/_catalogs/wp/",
+        "/_catalogs/masterpage/",
+        "/Style Library/Custom/**/*",
+        "/Pages/*"
+    ]
+   
+}
