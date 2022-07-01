@@ -20,82 +20,82 @@ function TestaCPF(strCPF) {
     return true;
 }
 
-// $(document).ready(function(){
+$(document).ready(function(){
 
-//     // const form = document.querySelector("#myform");
-//     // form.addEventListener("submit",function(event){
-//     //     event.preventDefault();
-//     // });
+    // const form = document.querySelector("#myform");
+    // form.addEventListener("submit",function(event){
+    //     event.preventDefault();
+    // });
    
     
-//     $("#btn-salvar").click(function(){
+    $("#btn-salvar").click(function(){
 
-//         var _title = $("#Title").val();
-//         var _cpf = $("#CPF").val();
-//         var _datadenascimento = $("#DatadeNascimento").val();
-//         var _email = $("#Email").val();
+        var _title = $("#Title").val();
+        var _cpf = $("#CPF").val();
+        var _datadenascimento = $("#DatadeNascimento").val();
+        var _email = $("#Email").val();
 
-//         var data = {
-//             Title: _title,
-//             CPF: _cpf,
-//             DatadeNascimento: _datadenascimento,
-//             Email: _email
-//         };
-//         try{
-//             console.log(data);
-//             addItem(data);
-//         } catch (e) {
-//             console.log(e);
-//         }
+        var data = {
+            Title: _title,
+            CPF: _cpf,
+            DatadeNascimento: _datadenascimento,
+            Email: _email
+        };
+        try{
+            console.log(data);
+            addItem(data);
+        } catch (e) {
+            console.log(e);
+        }
         
 
-//     //    addItem({
-//     //     Title: _title,
-//     //     CPF: _cpf,
-//     //     // DatadeNascimento: data.DatadeNascimento,
-//     //     Email: _email
-//     //    })
-//        console.log(data);
+    //    addItem({
+    //     Title: _title,
+    //     CPF: _cpf,
+    //     // DatadeNascimento: data.DatadeNascimento,
+    //     Email: _email
+    //    })
+       console.log(data);
 
-// });
+});
     
-// });
-// function getItem(){
+});
+function getItem(){
 
-//     $pnp.sp.web.lists.getByTitle("Colaboradores").items.get().then(function(res){
-//         var html;
-//         res.map(function(value){
-//             html += `<tr><td>${value.Id}</td><td>${value.Title,value.CPF,value.DatadeNascimento,value.Email}</tr></td>`;
-//         })
+    $pnp.sp.web.lists.getByTitle("Colaboradores").items.get().then(function(res){
+        var html;
+        res.map(function(value){
+            html += `<tr><td>${value.Id}</td><td>${value.Title,value.CPF,value.DatadeNascimento,value.Email}</tr></td>`;
+        })
 
-//         $("#myform").html(html);
-//         console.log();
-//     }).catch(function(err){
-//         console.log(err)
+        $("#myform").html(html);
+        console.log();
+    }).catch(function(err){
+        console.log(err)
 
-// })
+})
 
-// }
-// function addItem(item){
-//     $pnp.sp.web.lists.getByTitle("Colaboradores").items.add({
-//         Title: item.Title,
-//         CPF: item.CPF,
-//         DatadeNascimento: item.DatadeNascimento,
-//         Email: item.Email
+}
+function addItem(item){
+    $pnp.sp.web.lists.getByTitle("Colaboradores").items.add({
+        Title: item.Title,
+        CPF: item.CPF,
+        DatadeNascimento: item.DatadeNascimento,
+        Email: item.Email
 
       
-//     }).then(function(res){
-//         console.log(res);
-//         console.log(item);
+    }).then(function(res){
+        console.log(res);
+        console.log(item);
       
-//     });
-// }
-document.getElementById('btn-salvar').addEventListener('click',()=>this.AddItem());
-function AddItem() 
-{
-$pnp.sp.web.lists.getByTitle('Colaboradores').items.add({
-Title : document.getElementById('Title')["value"],
-CPF : document.getElementById('CPF')["value"],
-Email : document.getElementById('Email')["value"]})
-alert("Os dados foram adicionados "+ document.getElementById('Colaboradores')["value"] + " Added !");
-} 
+    });
+}
+// document.getElementById('btn-salvar').addEventListener('click',()=>this.AddItem());
+// AddItem() 
+// {
+// pnp.sp.web.lists.getByTitle('Colaboradores').items.add({
+// Title : document.getElementById('Title')["value"],
+// CPF : document.getElementById('CPF')["value"],
+// Email : document.getElementById('Email')["value"]8.})
+// alert("Os dados foram adicionados "+ document.getElementById('EmployeeName')["value"] + " Added !");
+// } 
