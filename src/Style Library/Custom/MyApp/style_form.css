@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background-color: #277796;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  color: white;
+}
+
+form {
+  margin: 20px 0;
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 5px;
+}
+
+form .row {
+  margin-bottom: 20px;
+}
+
+form .row label {
+  font-size: 14px;
+  color: rgb(61, 113, 139);
+}
+
+form .row input {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+  padding: 7px;
+  font-size: 16px;
+  color: #279687;
+  border-radius: 2px;
+  border: 1px solid #ccddef;
+  outline-color: #279687;
+}
+
+form #btn-salvar {
+  display: block;
+  min-width: 120px;
+  border: none;
+  background-color: #279687;
+  color: white;
+  border-radius: 25px;
+  margin: auto;
+  padding: 7px;
+}
+
+
+form{
+  overflow: hidden; 
+  animation: fade 0.5s;
+}
+
+
+form .row:nth-child(1) { 
+  animation: move 500ms; 
+}
+
+form .row:nth-child(2) { 
+  animation: move 400ms;
+  animation-delay: 100ms; 
+  animation-fill-mode: backwards; 
+}
+
+form #btn-salvar {
+  animation: move 400ms;
+  animation-delay: 250ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes move {
+  from { 
+    opacity: 0;
+    transform: translateX(-35%); 
+  }to {
+    opacity: 1;
+    transform: translateX(0%); 
+  }
+}
+
+@keyframes fade {
+  from { 
+    opacity: 0;
+    transform: scale(0.9);
+  }to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.form-hide { 
+  animation: down 1.2s;
+  animation-fill-mode: forwards; 
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); 
+}
+
+
+@keyframes down {
+  from {
+    transform: translateY(0); 
+  }to {
+    transform: translateY(100vh); 
+  }
+}
+
+
+form.validate-error { 
+  animation: nono 200ms linear, fade paused;
+  animation-iteration-count: 2;
+}
+
+
+@keyframes nono {
+  0%, 100% { 
+    transform: translateX(0);
+  } 
+  35% {
+    transform: translateX(-15%);
+  }
+  70% {
+    transform: translateX(15%);
+  }
+}
+
+
+
+.squares li { 
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  animation: up 2s infinite alternate;
+}
+
+@keyframes up {
+  from {
+    opacity: 0; 
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1.5;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-900px) rotate(960deg);
+  }
+}
+

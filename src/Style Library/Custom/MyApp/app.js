@@ -1,13 +1,4 @@
-function editItem(item){
-    $pnp.sp.web.lists.getByTitle("Atividades").items.getById(item.Id).update({
-        Title: item.Title,
-        ListaId: item.idLookup
-    }).then(function(resp){
-        getItem();
-    }).catch(function(err){
-        console.log(err);
-    })
-}
+
 $(document).ready(function(){
 
     getItem();
@@ -19,6 +10,14 @@ $(document).ready(function(){
 
         addItem({
             Title: title
+        });
+    });
+    $("#btn-salvar").click(function(){
+
+        var cpf = $("#CPF").val();
+
+        addItem({
+            CPF: cpf
         });
     });
     $("#btn-edit").click(function(){
@@ -59,7 +58,7 @@ function getItemById(id){
 
 function getItem(){
 
-    $pnp.sp.web.lists.getByTitle("Atividades").items.get().then(function(res){
+    $pnp.sp.web.lists.getByTitle("Colaboradores").items.get().then(function(res){
         var html;
         res.map(function(value){
             html += `<tr><td>${value.Id}</td><td>${value.Title}</tr></td>
@@ -80,8 +79,9 @@ function getItem(){
 
 }
 function addItem(item){
-    $pnp.sp.web.lists.getByTitle("Atividades").items.add({
-        Title: item.Title
+    $pnp.sp.web.lists.getByTitle("Colaboradores").items.add({
+        Title: item.Title,
+        CPF: item.CPF
     }).then(function(res){
         getItem();
     });

@@ -1,0 +1,8 @@
+<%-- SPG:
+
+This HTML file has been associated with a SharePoint Master Page (.master file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .master file, and any rename, move, or deletion operations will be reciprocated.
+
+To build the master page directly from this HTML file, simply edit the page as you normally would.  Use the Snippet Generator at https://academiashareptavanade.sharepoint.com/sites/Poc/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Facademiashareptavanade%2Esharepoint%2Ecom%2Fsites%2FPoc%2F%5Fcatalogs%2Fmasterpage%2Findex%2Emaster to create and customize useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file will automatically sync to the associated Master Page.
+
+ --%>
+<%@Master language="C#" Inherits="Microsoft.SharePoint.Publishing.Design.ConversionErrorMasterPage, Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
