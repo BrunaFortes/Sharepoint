@@ -49,12 +49,12 @@ $(document).ready(function(){
         }
         
 
-    //    addItem({
-    //     Title: _title,
-    //     CPF: _cpf,
-    //     // DatadeNascimento: data.DatadeNascimento,
-    //     Email: _email
-    //    })
+       addItem({
+        Title: _title,
+        CPF: _cpf,
+        // DatadeNascimento: data.DatadeNascimento,
+        Email: _email
+       })
        console.log(data);
 
 });
@@ -91,9 +91,9 @@ function addItem(item){
     });
 }
 // document.getElementById('btn-salvar').addEventListener('click',()=>this.AddItem());
-// AddItem() 
+// function AddItem() 
 // {
-// pnp.sp.web.lists.getByTitle('Colaboradores').items.add({
+// $pnp.sp.web.lists.getByTitle('Colaboradores').items.add({
 // Title : document.getElementById('Title')["value"],
 // CPF : document.getElementById('CPF')["value"],
 // Email : document.getElementById('Email')["value"]8.})
